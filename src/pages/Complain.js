@@ -16,9 +16,6 @@ const Complain = () => {
   const [messages, setMessages] = useState([])
 
   
-  const title = "Complain admin"
-  document.title = 'DumbMerch | ' + title
-  
   // code here
   const [state, dispatch] = useContext(UserContext)
   useEffect(() =>{
@@ -63,7 +60,7 @@ const Complain = () => {
               ...data,
               message: messages.length > 0 ? messages[messages.length - 1].message : "Click here to start message"
           }
-          console.log(contact);
+          console.log(data);
           setContacts([dataContact])
       })
 

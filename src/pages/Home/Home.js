@@ -27,7 +27,7 @@ const Home = () => {
           <h2 className='mt-4 mb-4 headline'>Product</h2>
           </Col>
           </Row>
-          <Row md={5}>
+          <Row lg={5}>
             {products?.map((item,index)=>(
                <Cards key={index} item = {item}/>
             ))}

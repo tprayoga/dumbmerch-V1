@@ -157,3 +157,15 @@
   border-right: 20px solid #575757;
   border-bottom: 15px solid transparent;
 }
+
+.status-transaction-success {
+  background-color: #268d37b0;
+}
+
+.status-transaction-pending {
+  background: #8b8d265b;
+}
+
+.status-transaction-failed {
+  background-color: #8d26265b;
+}

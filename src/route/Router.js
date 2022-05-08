@@ -12,12 +12,13 @@ import Editcategories from "../pages/Editcategories";
 import Editproducts from "../pages/Editproducts";
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products";
+import Transactions from "../pages/Transactions";
 
 const Router = () => {
   return (
     <Routes>
     <Route path="/register" element={<Register />} />
-    {/* <Route path="/profile" element={<Profile />} /> */}
+    <Route path="/profile" element={<Transactions />} />
     <Route path="/edit-product/:id" element={<Editproducts />} />
     <Route path="/product" element={<Products />} />
     <Route path="/" element={<Login />} />

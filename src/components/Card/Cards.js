@@ -9,7 +9,7 @@ const Cards = ({ item }) => {
     maximumFractionDigits: 0,
   });
   return (
-    <Col>
+    <Col md={2}>
       <Link to={`/detail-product/${item.id}`} className="product text-decoration-none ">
         <Card bg="dark" className="mb-4">
           <Card.Img

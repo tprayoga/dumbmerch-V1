@@ -20,8 +20,8 @@ const App = () => {
       navigate('/');
     } else {
       if (state.user.status === 'admin') {
-        navigate('/add-product');
-      }else if (state.user.status === 'buyer'){
+        navigate('/admin-complain');
+      }else if (state.user.status === 'customer'){
         navigate('/home')
       }
     }

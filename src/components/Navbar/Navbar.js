@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const [isBuyer, setIsBuyer] = useState(false);
   useEffect(()=> {
-    if (state.user.status === 'buyer'){
+    if (state.user.status === 'customer'){
       setIsBuyer(true)
     }
   },[])

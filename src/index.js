@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap";
 import { QueryClient, QueryClientProvider } from "react-query";
-
 import { UserContextProvider } from "./context/userContext";
 
 // init Client from QueryClient() here

@@ -119,6 +119,7 @@
 .chat-me {
   position: relative;
   background: #262626;
+  color: aliceblue;
   border-radius: 5px;
   padding: 10px;
   font-weight: 500;

@@ -47,7 +47,7 @@ const Navbar = () => {
                     <strong>Complain</strong>
                   </NavLink>
                   <NavLink className="nav-link fs-5" aria-current="page" to="/profile" style={({ isActive }) => ({ color: isActive ? "#f74d4d" : "#ffffff" })}>
-                    <strong>Pofile</strong>
+                    <strong>Profile</strong>
                   </NavLink>
                   <NavLink onClick={logout} className="nav-link fs-5" aria-current="page" to="/" style={({ isActive }) => ({ color: isActive ? "#f74d4d" : "#ffffff" })}>
                     <strong>Logout</strong>

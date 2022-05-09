@@ -56,10 +56,10 @@ const Admincomplain = () => {
   
       // listen event to get admin contact
       socket.on("customers contact", (data) => {
-        let dataContact = data.filter((item) => item.status !== "admin" && (item.recipientMessage.length >= 0 || item.senderMessage.length >= 0));
+        let dataContacts = data.filter((item) => item.status !== "admin" && (item.recipientMessage.length >= 0 || item.senderMessage.length >= 0));
   
         console.log(data);
-        dataContact = dataContact.map((item) => {
+        dataContacts = dataContacts.map((item) => {
           return {
             ...item,
             message: item.senderMessage.length > 0 ? item.senderMessage[item.senderMessage.length - 1].message : "Click here to start message",
@@ -67,7 +67,7 @@ const Admincomplain = () => {
         });
   
         console.log(data);
-        setContacts(dataContact);
+        setContacts(dataContacts);
       });
     };
   
@@ -80,8 +80,7 @@ const Admincomplain = () => {
   
     const loadMessages = (value) => {
       // listen event to get admin contact
-      socket.on("customers contact", (data) => {
-        socket.on("messages", async (data) => {
+        socket.on("messages", (data) => {
           if (data.length > 0) {
             const dataMessages = data.map((item) => ({
               idSender: item.sender.id,
@@ -94,10 +93,10 @@ const Admincomplain = () => {
             console.log("Data Messages", dataMessages);
             setMessages(dataMessages);
           }
+          loadContact ()
           const chatMessages = document.getElementById("chat-messages");
           chatMessages.scrollTop = chatMessages?.scrollHeight;
         });
-      });
     };
   
     const onSendMessage = (e) => {

@@ -15,7 +15,7 @@ const Transactions = () => {
   const [state] = useContext(UserContext);
 
   const getTransactios = async () => {
-    const response = await API.get("/transactions");
+    const response = await API.get("/transaction");
     setTransaction(response.data.data);
   };
 

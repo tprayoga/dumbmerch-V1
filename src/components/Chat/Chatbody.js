@@ -3,7 +3,6 @@ import Merch from "../assets/Frame (1).png"
 
 
 const Chatbody = ({ contact, user, messages, sendMessage }) => {
-  console.log(messages);
   return (
     <>
       {contact ? (

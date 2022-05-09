@@ -14,7 +14,7 @@ const Cards = ({ item }) => {
         <Card bg="dark" className="mb-4">
           <Card.Img
             className="img"
-            height={300}
+            height={250}
             variant="top"
             src={item.image}
           />

@@ -20,7 +20,7 @@ const Home = () => {
 
   let { data: products } = useQuery("productsCache", async () => {
     const response = await API.get("/products");
-    return response.data.data.products //.slice(0,listCard)
+    return response.data.data.products.slice(0,listCard)
   });
 
   return (

@@ -101,7 +101,7 @@ const Complain = () => {
         });
       });
     };
-  
+  console.log(state.user)
     const onSendMessage = (e) => {
       if (e.key === "Enter") {
         const data = {

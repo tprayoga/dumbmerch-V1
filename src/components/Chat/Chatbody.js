@@ -8,7 +8,7 @@ const Chatbody = ({ contact, user, messages, sendMessage }) => {
       {contact ? (
         <>
           <div id="chat-messages" style={{ height: "80vh" }} className="overflow-auto px-3 py-2">
-          {messages.map((item, index) => (
+          {messages?.map((item, index) => (
               <div key={index}>
                 <div className={`d-flex py-1 ${item.idSender === user.id ? "justify-content-end": "justify-content-start"}`}>
                   {item.idSender !== user.id && (

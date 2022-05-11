@@ -71,7 +71,7 @@ const Transactions = () => {
                               <span className="fw-bold text-danger ">{item.product.name}</span>
                               <small className="text-danger d-block mb-3">{item.createdAt} WIB</small>
                               <span className="text-white me-1 d-inline-block">Price: {item.product.price}</span>
-                              <span className="text-white d-inline-block"> Status: {item.status}</span>
+                              <span className={`status-transaction-${item.status}`}>{item.status}</span>
                             </div>
                           </td>
                           <td className="pe-3">

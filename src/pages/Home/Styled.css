@@ -160,13 +160,13 @@
 }
 
 .status-transaction-success {
-  background-color: #268d37b0;
+  background-color: #268d37b0 !important
 }
 
 .status-transaction-pending {
-  background: #8b8d265b;
+  background: #8b8d265b !important
 }
 
 .status-transaction-failed {
-  background-color: #8d26265b;
+  background-color: #8d26265b !important
 }

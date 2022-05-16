@@ -9,8 +9,6 @@ const Addproduct = () => {
 
   let navigate = useNavigate();
 
-  const [categories, setCategories] = useState([]); //Store all category data
-  const [categoryId, setCategoryId] = useState([]); //Save the selected category id
   const [preview, setPreview] = useState(null); //For image preview
   const [form, setForm] = useState({
     image: '',
@@ -21,31 +19,10 @@ const Addproduct = () => {
   }); //Store product data
 
   // Fetching category data
-  const getCategories = async () => {
-    try {
-      const response = await API.get('/categories');
-      setCategories(response.data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
 
   // For handle if category selected
-  const handleChangeCategoryId = (e) => {
-    const id = e.target.value;
-    const checked = e.target.checked;
 
-    if (checked) {
-      // Save category id if checked
-      setCategoryId([...categoryId, parseInt(id)]);
-    } else {
-      // Delete category id from variable if unchecked
-      let newCategoryId = categoryId.filter((categoryIdItem) => {
-        return categoryIdItem != id;
-      });
-      setCategoryId(newCategoryId);
-    }
-  };
 
   // Handle change data on form
   const handleChange = (e) => {
@@ -80,7 +57,6 @@ const Addproduct = () => {
       formData.set('desc', form.desc);
       formData.set('price', form.price);
       formData.set('qty', form.qty);
-      formData.set('categoryId', categoryId);
 
       console.log(form);
 

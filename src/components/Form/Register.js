@@ -1,17 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Alert, Button, Card } from 'react-bootstrap';
 import { useMutation } from 'react-query';
-import { useNavigate } from 'react-router-dom';
 import { API } from '../../config/api';
-import { UserContext } from '../../context/userContext';
 
 const Register = () => {
-    let navigate = useNavigate();
 
-    const title = 'Register';
-    document.title = 'DumbMerch | ' + title;
-  
-    const [state, dispatch] = useContext(UserContext);
+
   
     const [message, setMessage] = useState(null);
     const [form, setForm] = useState({

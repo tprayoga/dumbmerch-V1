@@ -8,7 +8,6 @@ const Editproduct = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const [categories, setCategories] = useState([]); //Store all category data
   const [categoryId, setCategoryId] = useState([]); //Save the selected category id
   const [preview, setPreview] = useState(null); //For image preview
   const [product, setProduct] = useState({}); //Store product data
@@ -27,10 +26,6 @@ const Editproduct = () => {
   });
 
   // Fetching category data
-  let { data: categoriesData, refetch: refetchCategories } = useQuery("categoriesCache", async () => {
-    const response = await API.get("/categories");
-    return response.data.categories;
-  });
 
   useEffect(() => {
     if (products) {
@@ -45,29 +40,11 @@ const Editproduct = () => {
       setProduct(products);
     }
 
-    if (categoriesData) {
-      setCategories(categoriesData);
-    }
+
   }, [products]);
 
   // For handle if category selected
-  const handleChangeCategoryId = (e) => {
-    const id = e.target.value;
-    const checked = e.target.checked;
  
-    if (checked == true) {
-      // Save category id if checked
-      setCategoryId([...categoryId, parseInt(id)]);
-    } else {
-      // Delete category id from variable if unchecked
-      let newCategoryId = categoryId.filter((categoryIdItem) => {
-        return categoryIdItem != id;
-      });
-      setCategoryId(newCategoryId);
-    }
-  };
-
-  // Handle change data on form
   const handleChange = (e) => {
     setForm({
       ...form,

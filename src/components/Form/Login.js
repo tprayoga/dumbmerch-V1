@@ -45,7 +45,7 @@ const Loginform = () => {
 
   
         // Checking process
-        if (response.data.status === "Success") {
+        if (response?.data.status === "Success") {
           // Send data to useContext
           dispatch({
             type: 'LOGIN_SUCCESS',

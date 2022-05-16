@@ -18,7 +18,7 @@ const Home = () => {
 
   console.log(loadMore);
 
-  let { data: products } = useQuery("productsCache", async () => {
+  let { data: products } = useQuery(["productsCache", listCard], async () => {
     const response = await API.get("/products");
     return response.data.data.products.slice(0,listCard)
   });

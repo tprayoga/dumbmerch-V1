@@ -49,7 +49,7 @@ const Loginform = () => {
           // Send data to useContext
           dispatch({
             type: 'LOGIN_SUCCESS',
-            payload: response.data.data.data.user
+            payload: response.data.data.data
           });
   
           // Status check
